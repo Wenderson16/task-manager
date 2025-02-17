@@ -11,7 +11,7 @@ function Home() {
         <style> backgroundColor: ''</style>
         <img src={logo} className="App-logo" alt="logo" />
         <h1>Bem-vindo ao Sistema de Gestão de Tarefas</h1>
-        <p>Utilize o menu para navegar entre as páginas.</p>
+        <p>Organize suas tarefas de forma simples e eficiente!</p>
        
        
        

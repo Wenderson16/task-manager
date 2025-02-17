@@ -1,0 +1,22 @@
+/* src/components/NavBar.css */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #23282B;
+  padding: 15px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #007bff;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  background-color: #0003b3;
+}

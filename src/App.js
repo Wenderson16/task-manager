@@ -1,24 +1,27 @@
 // src/App.js
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Tasks from "./pages/Tasks";
 import About from "./pages/About";
-import NavBar from './components/NavBar'; // importe o componente NavBar
 
-
+import NavBar from './components/NavBar'; // Componente NavBar
 
 function App() {
+  const location = useLocation();
+
   return (
     <Router>
-       <NavBar /> {/* A NavBar será exibida em todas as rotas */}
+      {/* Condicionando a renderização da NavBar */}
+      {location.pathname !== "/login" && <NavBar />} {/* NavBar só aparece se não estiver na página de Login */}
+      
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/tasks" element={<Tasks />} />
         <Route path="/about" element={<About />} />
+    
       </Routes>
     </Router>
   );
 }
 
 export default App;
-
